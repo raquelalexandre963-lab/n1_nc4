@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+    int idade;
+    float altura;
+    char letra;
+    char nome[20];
+
+    // 1. Pede os dados pro usuário
+    printf("Digite seu nome: ");
+    scanf("%s", nome); // texto não usa &
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade); // int usa &
+
+    printf("Digite sua altura: ");
+    scanf("%f", &altura); // float usa &
+
+    printf("Digite uma letra: ");
+    scanf(" %c", &letra); // char usa & e um espaço antes do %c
+
+    // 2. Mostra tudo que o usuário digitou
+    printf("\n--- Dados Cadastrados ---\n");
+    printf("Nome: %s\n", nome);
+    printf("Idade: %d anos\n", idade);
+    printf("Altura: %.2f metros\n", altura);
+    printf("Letra escolhida: %c\n", letra);
+
+    return 0;
+}
